@@ -29,10 +29,10 @@ class AlbunsController extends Controller
             });
         }
 
-        // Ordenação
+       
         $query->orderBy($sortBy, 'asc');
 
-        // Paginação
+        
         $albuns = $query->paginate(10);
 
         return view('albuns.index', ['albuns' => $albuns]);
