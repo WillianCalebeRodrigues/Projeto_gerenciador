@@ -13,7 +13,7 @@ class ArtistasController extends Controller
         $search = $request->input('search'); 
         $sortBy = $request->input('sort_by', 'id'); 
 
-        // Filtra e ordena os artistas
+       
         $artistas = Artista::when($search, function ($query, $search) {
             $query->where('nome_artista', 'LIKE', "%$search%")
                   ->orWhere('nacionalidade', 'LIKE', "%$search%");
